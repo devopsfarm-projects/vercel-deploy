@@ -1,9 +1,9 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: "my-react-app"
+  name: "{{cookiecutter.project_name}}"
   annotations:
-    github.com/project-slig: devopsfarm-projects/vercel-deploy
+    github.com/project-slig: {{ cookiecutter.destination.owner + '/' + cookiecutter.destination.repo }}
 spec:
   type: service
   owner: user:guest
